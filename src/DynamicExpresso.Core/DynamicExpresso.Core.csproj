@@ -18,11 +18,18 @@
     <RepositoryType>git</RepositoryType>
     <VersionPrefix>0.0.1</VersionPrefix>
     <VersionSuffix></VersionSuffix>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>newsolOmv.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
 
   <ItemGroup Condition=" $(TargetFramework.StartsWith('net4')) ">
     <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="newsolOmv.snk" Version="1.0.0" />
   </ItemGroup>
 
 </Project>
