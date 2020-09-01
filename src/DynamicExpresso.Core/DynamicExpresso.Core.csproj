@@ -19,17 +19,18 @@
     <VersionPrefix>0.0.1</VersionPrefix>
     <VersionSuffix></VersionSuffix>
     <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>newsolOmv.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>DummyKeyFile.snk</AssemblyOriginatorKeyFile>
+    <PackageId>DynamicExpresso.Core.Signed</PackageId>
+    <Product>DynamicExpresso.Core</Product>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
+    <OutputPath>Q:\NewSolNugetPackages\AllPackages\</OutputPath>
   </PropertyGroup>
 
 
   <ItemGroup Condition=" $(TargetFramework.StartsWith('net4')) ">
     <Reference Include="Microsoft.CSharp" />
-  </ItemGroup>
-
-
-  <ItemGroup>
-    <PackageReference Include="newsolOmv.snk" Version="1.0.0" />
   </ItemGroup>
 
 </Project>
